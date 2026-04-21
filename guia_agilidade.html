@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia de Agilidade no Atendimento</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+h1, h2, h3 { color: #2c3e50; }
+section { margin-bottom: 40px; }
+</style>
+</head>
+<body>
+<pre>pageType: cover
+elements:
+  - elementId: bg-image
+    elementType: image
+    bounds: [0, 0, 1280, 720]
+    src: "./images/cover_bg.png"
+    fit:
+      mode: cover
+
+  - elementId: bg-mask
+    elementType: shape
+    shapeName: rect
+    bounds: [0, 0, 1280, 720]
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 0
+      stops:
+        - {position: 0, color: "#293241E6"}
+        - {position: 0.55, color: "#293241CC"}
+        - {position: 1, color: "#29324180"}
+
+  - elementId: cover-title
+    elementType: text
+    bounds: [100, 220, 1080, 120]
+    content:
+      style: "$title"
+      align: [center, middle]
+      text: |
+        <p>Guia Prático de Agilidade</p>
+        <p>no Atendimento e Agendamento</p>
+
+  - elementId: cover-line
+    elementType: shape
+    shapeName: rect
+    bounds: [490, 360, 300, 2]
+    fill:
+      type: solid
+      color: "#FFFFFF60"
+
+  - elementId: cover-subtitle
+    elementType: text
+    bounds: [200, 385, 880, 40]
+    content:
+      style: "$subtitle"
+      align: [center, middle]
+      text: |
+        <p>Organização, estratégias e boas práticas para um atendimento mais eficiente</p>
+
+  - elementId: cover-icon
+    elementType: icon
+    bounds: [610, 470, 60, 60]
+    iconName: "fas:headset"
+    fill:
+      type: solid
+      color: "#FFFFFF30"
+
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  - elementId: left-bar
+    elementType: shape
+    shapeName: rect
+    bounds: [0, 0, 4, 720]
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 45, 500, 40]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Objetivo deste Guia</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 90, 100, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: icon-1
+    elementType: icon
+    bounds: [80, 155, 36, 36]
+    iconName: "fas:list-check"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: card-1-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 135, 1160, 78]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: card-1-text
+    elementType: text
+    bounds: [135, 155, 1060, 38]
+    content:
+      style: "$body"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong style="color:$primary;">Organizar o fluxo de trabalho diário</strong> com processos claros e eficientes</p>
+
+  - elementId: icon-2
+    elementType: icon
+    bounds: [80, 255, 36, 36]
+    iconName: "fas:bolt"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: card-2-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 235, 1160, 78]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: card-2-text
+    elementType: text
+    bounds: [135, 255, 1060, 38]
+    content:
+      style: "$body"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong style="color:$primary;">Trazer mais agilidade, clareza e eficiência</strong> nos atendimentos</p>
+
+  - elementId: icon-3
+    elementType: icon
+    bounds: [80, 355, 36, 36]
+    iconName: "fas:shield-halved"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: card-3-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 335, 1160, 78]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: card-3-text
+    elementType: text
+    bounds: [135, 355, 1060, 38]
+    content:
+      style: "$body"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p><strong style="color:$primary;">Reduzir erros</strong> e otimizar o tempo de resposta ao paciente</p>
+
+  - elementId: icon-4
+    elementType: icon
+    bounds: [80, 455, 36, 36]
+    iconName: "fas:puzzle-piece"
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: card-4-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 435, 1160, 78]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: card-4-text
+    elementType: text
+    bounds: [135, 455, 1060, 38]
+    content:
+      style: "$body"
+      align: [left, middle]
+      text: |
+        <p>Combinar <strong style="color:$primary;">organização do ambiente</strong>, <strong style="color:$primary;">uso de atalhos</strong>, <strong style="color:$primary;">padronização de respostas</strong> e <strong style="color:$primary;">execução simultânea de tarefas</strong></p>
+
+  - elementId: summary-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 555, 1160, 100]
+    fill:
+      type: solid
+      color: "$primary"
+    shadow:
+      blur: 10
+      color: "#00000015"
+      offset: [0, 4]
+
+  - elementId: summary-text
+    elementType: text
+    bounds: [90, 575, 1100, 60]
+    content:
+      fontSize: 18
+      fontFamily: "QuattrocentoSans"
+      color: "$light"
+      lineHeight: 1.4
+      align: [center, middle]
+      text: |
+        <p>Este guia combina <strong>organização do ambiente</strong>, <strong>uso de atalhos</strong>, <strong>padronização de respostas</strong> e <strong>execução simultânea de tarefas</strong></p>
+
+  - elementId: page-num
+    elementType: text
+    bounds: [1180, 685, 60, 20]
+    content:
+      style: "$pageNumber"
+      align: [right, middle]
+      wrap: false
+      text: "02"
+
+pageType: chapter
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: deco-circle
+    elementType: shape
+    shapeName: ellipse
+    bounds: [880, 0, 400, 400]
+    fill:
+      type: solid
+      color: "#FFFFFF08"
+
+  - elementId: deco-circle-2
+    elementType: shape
+    shapeName: ellipse
+    bounds: [0, 540, 180, 180]
+    fill:
+      type: solid
+      color: "#FFFFFF06"
+
+  - elementId: chapter-num
+    elementType: text
+    bounds: [60, 180, 300, 156]
+    content:
+      style: "$chapter_num"
+      align: [left, middle]
+      wrap: false
+      text: "01"
+
+  - elementId: chapter-label
+    elementType: text
+    bounds: [60, 340, 200, 24]
+    content:
+      fontSize: 14
+      fontFamily: "Liter"
+      color: "$secondary"
+      letterSpacing: 3
+      align: [left, middle]
+      wrap: false
+      text: "CAPÍTULO"
+
+  - elementId: chapter-title
+    elementType: text
+    bounds: [60, 374, 700, 46]
+    content:
+      style: "$chapter_title"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Organização Inicial do Ambiente</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 435, 80, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: chapter-desc
+    elementType: text
+    bounds: [60, 458, 650, 80]
+    content:
+      style: "$chapter_subtitle"
+      align: [left, top]
+      text: |
+        <p>Configure seu espaço de trabalho para máxima produtividade e fluidez nas operações diárias</p>
+
+  - elementId: chapter-icon
+    elementType: icon
+    bounds: [1100, 310, 80, 80]
+    iconName: "fas:display"
+    fill:
+      type: solid
+      color: "#FFFFFF15"
+
+pageType: chapter
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: deco-circle
+    elementType: shape
+    shapeName: ellipse
+    bounds: [880, 0, 400, 400]
+    fill:
+      type: solid
+      color: "#FFFFFF08"
+
+  - elementId: deco-circle-2
+    elementType: shape
+    shapeName: ellipse
+    bounds: [0, 540, 180, 180]
+    fill:
+      type: solid
+      color: "#FFFFFF06"
+
+  - elementId: chapter-num
+    elementType: text
+    bounds: [60, 180, 300, 156]
+    content:
+      style: "$chapter_num"
+      align: [left, middle]
+      wrap: false
+      text: "02"
+
+  - elementId: chapter-label
+    elementType: text
+    bounds: [60, 340, 200, 24]
+    content:
+      fontSize: 14
+      fontFamily: "Liter"
+      color: "$secondary"
+      letterSpacing: 3
+      align: [left, middle]
+      wrap: false
+      text: "CAPÍTULO"
+
+  - elementId: chapter-title
+    elementType: text
+    bounds: [60, 374, 700, 46]
+    content:
+      style: "$chapter_title"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Estratégias para Agilidade</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 435, 80, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: chapter-desc
+    elementType: text
+    bounds: [60, 458, 650, 80]
+    content:
+      style: "$chapter_subtitle"
+      align: [left, top]
+      text: |
+        <p>Técnicas práticas para acelerar o atendimento e reduzir o tempo operacional</p>
+
+  - elementId: chapter-icon
+    elementType: icon
+    bounds: [1100, 310, 80, 80]
+    iconName: "fas:rocket"
+    fill:
+      type: solid
+      color: "#FFFFFF15"
+
+pageType: chapter
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: deco-circle
+    elementType: shape
+    shapeName: ellipse
+    bounds: [880, 0, 400, 400]
+    fill:
+      type: solid
+      color: "#FFFFFF08"
+
+  - elementId: deco-circle-2
+    elementType: shape
+    shapeName: ellipse
+    bounds: [0, 540, 180, 180]
+    fill:
+      type: solid
+      color: "#FFFFFF06"
+
+  - elementId: chapter-num
+    elementType: text
+    bounds: [60, 180, 300, 156]
+    content:
+      style: "$chapter_num"
+      align: [left, middle]
+      wrap: false
+      text: "03"
+
+  - elementId: chapter-label
+    elementType: text
+    bounds: [60, 340, 200, 24]
+    content:
+      fontSize: 14
+      fontFamily: "Liter"
+      color: "$secondary"
+      letterSpacing: 3
+      align: [left, middle]
+      wrap: false
+      text: "CAPÍTULO"
+
+  - elementId: chapter-title
+    elementType: text
+    bounds: [60, 374, 700, 46]
+    content:
+      style: "$chapter_title"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Uso Inteligente do Botmaker</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 435, 80, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: chapter-desc
+    elementType: text
+    bounds: [60, 458, 650, 80]
+    content:
+      style: "$chapter_subtitle"
+      align: [left, top]
+      text: |
+        <p>Acelere suas respostas com atalhos e combos automatizados</p>
+
+  - elementId: chapter-icon
+    elementType: icon
+    bounds: [1100, 310, 80, 80]
+    iconName: "fas:robot"
+    fill:
+      type: solid
+      color: "#FFFFFF15"
+
+pageType: chapter
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: deco-circle
+    elementType: shape
+    shapeName: ellipse
+    bounds: [880, 0, 400, 400]
+    fill:
+      type: solid
+      color: "#FFFFFF08"
+
+  - elementId: deco-circle-2
+    elementType: shape
+    shapeName: ellipse
+    bounds: [0, 540, 180, 180]
+    fill:
+      type: solid
+      color: "#FFFFFF06"
+
+  - elementId: chapter-num
+    elementType: text
+    bounds: [60, 180, 300, 156]
+    content:
+      style: "$chapter_num"
+      align: [left, middle]
+      wrap: false
+      text: "04"
+
+  - elementId: chapter-label
+    elementType: text
+    bounds: [60, 340, 200, 24]
+    content:
+      fontSize: 14
+      fontFamily: "Liter"
+      color: "$secondary"
+      letterSpacing: 3
+      align: [left, middle]
+      wrap: false
+      text: "CAPÍTULO"
+
+  - elementId: chapter-title
+    elementType: text
+    bounds: [60, 374, 700, 46]
+    content:
+      style: "$chapter_title"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Estratégias Durante o Atendimento</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 435, 80, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: chapter-desc
+    elementType: text
+    bounds: [60, 458, 650, 80]
+    content:
+      style: "$chapter_subtitle"
+      align: [left, top]
+      text: |
+        <p>Otimize seu tempo com técnicas de multitarefa e verificação inteligente</p>
+
+  - elementId: chapter-icon
+    elementType: icon
+    bounds: [1100, 310, 80, 80]
+    iconName: "fas:users-gear"
+    fill:
+      type: solid
+      color: "#FFFFFF15"
+
+pageType: chapter
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: deco-circle
+    elementType: shape
+    shapeName: ellipse
+    bounds: [880, 0, 400, 400]
+    fill:
+      type: solid
+      color: "#FFFFFF08"
+
+  - elementId: deco-circle-2
+    elementType: shape
+    shapeName: ellipse
+    bounds: [0, 540, 180, 180]
+    fill:
+      type: solid
+      color: "#FFFFFF06"
+
+  - elementId: chapter-num
+    elementType: text
+    bounds: [60, 180, 300, 156]
+    content:
+      style: "$chapter_num"
+      align: [left, middle]
+      wrap: false
+      text: "05"
+
+  - elementId: chapter-label
+    elementType: text
+    bounds: [60, 340, 200, 24]
+    content:
+      fontSize: 14
+      fontFamily: "Liter"
+      color: "$secondary"
+      letterSpacing: 3
+      align: [left, middle]
+      wrap: false
+      text: "CAPÍTULO"
+
+  - elementId: chapter-title
+    elementType: text
+    bounds: [60, 374, 700, 46]
+    content:
+      style: "$chapter_title"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Dicas para Convênios</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 435, 80, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: chapter-desc
+    elementType: text
+    bounds: [60, 458, 650, 80]
+    content:
+      style: "$chapter_subtitle"
+      align: [left, top]
+      text: |
+        <p>Regras essenciais para evitar erros de agendamento por plano de saúde</p>
+
+  - elementId: chapter-icon
+    elementType: icon
+    bounds: [1100, 310, 80, 80]
+    iconName: "fas:hospital"
+    fill:
+      type: solid
+      color: "#FFFFFF15"
+
+pageType: chapter
+background:
+  type: solid
+  color: "$primary"
+elements:
+  - elementId: deco-circle
+    elementType: shape
+    shapeName: ellipse
+    bounds: [880, 0, 400, 400]
+    fill:
+      type: solid
+      color: "#FFFFFF08"
+
+  - elementId: deco-circle-2
+    elementType: shape
+    shapeName: ellipse
+    bounds: [0, 540, 180, 180]
+    fill:
+      type: solid
+      color: "#FFFFFF06"
+
+  - elementId: chapter-num
+    elementType: text
+    bounds: [60, 180, 300, 156]
+    content:
+      style: "$chapter_num"
+      align: [left, middle]
+      wrap: false
+      text: "06"
+
+  - elementId: chapter-label
+    elementType: text
+    bounds: [60, 340, 200, 24]
+    content:
+      fontSize: 14
+      fontFamily: "Liter"
+      color: "$secondary"
+      letterSpacing: 3
+      align: [left, middle]
+      wrap: false
+      text: "CAPÍTULO"
+
+  - elementId: chapter-title
+    elementType: text
+    bounds: [60, 374, 700, 46]
+    content:
+      style: "$chapter_title"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Boas Práticas Gerais</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 435, 80, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: chapter-desc
+    elementType: text
+    bounds: [60, 458, 650, 80]
+    content:
+      style: "$chapter_subtitle"
+      align: [left, top]
+      text: |
+        <p>Hábitos essenciais para manter a qualidade e a eficiência no atendimento</p>
+
+  - elementId: chapter-icon
+    elementType: icon
+    bounds: [1100, 310, 80, 80]
+    iconName: "fas:award"
+    fill:
+      type: solid
+      color: "#FFFFFF15"
+
+pageType: content
+background:
+  type: solid
+  color: "$background"
+elements:
+  - elementId: left-bar
+    elementType: shape
+    shapeName: rect
+    bounds: [0, 0, 4, 720]
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: page-title
+    elementType: text
+    bounds: [60, 45, 600, 40]
+    content:
+      style: "$heading"
+      align: [left, middle]
+      wrap: false
+      text: |
+        <p>Checklist de Boas Práticas</p>
+
+  - elementId: title-line
+    elementType: shape
+    shapeName: rect
+    bounds: [60, 90, 100, 3]
+    fill:
+      type: solid
+      color: "$secondary"
+
+  - elementId: item1-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 125, 1160, 110]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: item1-num-bg
+    elementType: shape
+    shapeName: ellipse
+    bounds: [90, 155, 50, 50]
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: item1-num
+    elementType: text
+    bounds: [90, 155, 50, 50]
+    content:
+      fontSize: 22
+      fontFamily: "Liter"
+      color: "$light"
+      align: [center, middle]
+      wrap: false
+      text: "1"
+
+  - elementId: item1-text
+    elementType: text
+    bounds: [160, 146, 1020, 72]
+    content:
+      style: "$bodyLarge"
+      align: [left, middle]
+      text: |
+        <p><strong>Sempre revise antes de finalizar o agendamento</strong></p>
+        <p><span style="font-size:16px; color:$muted;">Confirme todos os dados para evitar retrabalho</span></p>
+
+  - elementId: item2-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 255, 1160, 110]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: item2-num-bg
+    elementType: shape
+    shapeName: ellipse
+    bounds: [90, 285, 50, 50]
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: item2-num
+    elementType: text
+    bounds: [90, 285, 50, 50]
+    content:
+      fontSize: 22
+      fontFamily: "Liter"
+      color: "$light"
+      align: [center, middle]
+      wrap: false
+      text: "2"
+
+  - elementId: item2-text
+    elementType: text
+    bounds: [160, 278, 1020, 68]
+    content:
+      style: "$bodyLarge"
+      align: [left, middle]
+      text: |
+        <p><strong>Priorize clareza e objetividade nas mensagens</strong></p>
+        <p><span style="font-size:16px; color:$muted;">Mensagens diretas evitam confusão e economizam tempo</span></p>
+
+  - elementId: item3-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 385, 1160, 110]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: item3-num-bg
+    elementType: shape
+    shapeName: ellipse
+    bounds: [90, 415, 50, 50]
+    fill:
+      type: solid
+      color: "$primary"
+
+  - elementId: item3-num
+    elementType: text
+    bounds: [90, 415, 50, 50]
+    content:
+      fontSize: 22
+      fontFamily: "Liter"
+      color: "$light"
+      align: [center, middle]
+      wrap: false
+      text: "3"
+
+  - elementId: item3-text
+    elementType: text
+    bounds: [160, 408, 1020, 68]
+    content:
+      style: "$bodyLarge"
+      align: [left, middle]
+      text: |
+        <p><strong>Use padrões para manter consistência no atendimento</strong></p>
+        <p><span style="font-size:16px; color:$muted;">Padronização garante qualidade em todos os atendimentos</span></p>
+
+  - elementId: item4-bg
+    elementType: shape
+    shapeName: roundRect
+    adjustments: [8000]
+    bounds: [60, 515, 1160, 110]
+    fill:
+      type: solid
+      color: "$card"
+    shadow:
+      blur: 8
+      color: "#00000008"
+      offset: [0, 2]
+
+  - elementId: item4-num-bg
+    elementType: shape
+    shapeName: ellipse
+    bounds: [90, 545, 50, 50]
+    fill:
+      type: solid
+      color: "$accent"
+
+  - elementId: item4-num
+    elementType: text
+    bounds: [90, 545, 50, 50]
+    content:
+      fontSize: 22
+      fontFamily: "Liter"
+      color: "$light"
+      align: [center, middle]
+      wrap: false
+      text: "4"
+
+  - elementId: item4-text
+    elementType: text
+    bounds: [160, 538, 1020, 68]
+    content:
+      style: "$bodyLarge"
+      align: [left, middle]
+      text: |
+        <p><strong>Com o tempo, foque em memorização dos processos</strong></p>
+        <p><span style="font-size:16px; color:$muted;">Memorização gera ainda mais velocidade no atendimento</span></p>
+
+  - elementId: page-num
+    elementType: text
+    bounds: [1180, 685, 60, 20]
+    content:
+      style: "$pageNumber"
+      align: [right, middle]
+      wrap: false
+      text: "14"
+
+pageType: final
+elements:
+  - elementId: bg-image
+    elementType: image
+    bounds: [0, 0, 1280, 720]
+    src: "./images/cover_bg.png"
+    fit:
+      mode: cover
+    crop:
+      top: 0.1
+      bottom: 0.1
+
+  - elementId: bg-mask
+    elementType: shape
+    shapeName: rect
+    bounds: [0, 0, 1280, 720]
+    fill:
+      type: gradient
+      gradientType: linear
+      angle: 90
+      stops:
+        - {position: 0, color: "#3D5A80F0"}
+        - {position: 0.6, color: "#3D5A80E8"}
+        - {position: 1, color: "#3D5A80D0"}
+
+  - elementId: deco-line-top
+    elementType: shape
+    shapeName: rect
+    bounds: [540, 180, 200, 2]
+    fill:
+      type: solid
+      color: "#FFFFFF40"
+
+  - elementId: final-title
+    elementType: text
+    bounds: [160, 210, 960, 60]
+    content:
+      fontSize: 42
+      fontFamily: "Liter"
+      color: "$light"
+      letterSpacing: 1
+      align: [center, middle]
+      wrap: false
+      text: |
+        <p>Conclusão</p>
+
+  - elementId: deco-line-bottom
+    elementType: shape
+    shapeName: rect
+    bounds: [540, 290, 200, 2]
+    fill:
+      type: solid
+      color: "#FFFFFF40"
+
+  - elementId: final-text
+    elementType: text
+    bounds: [140, 320, 1000, 220]
+    content:
+      fontSize: 20
+      fontFamily: "QuattrocentoSans"
+      color: "#FFFFFFEE"
+      lineHeight: 1.6
+      align: [center, middle]
+      text: |
+        <p>A combinação de <strong style="color:$accent;">organização do ambiente</strong>, <strong style="color:$accent;">uso de atalhos</strong>, <strong style="color:$accent;">padronização de respostas</strong> e <strong style="color:$accent;">execução simultânea de tarefas</strong> permite um atendimento mais rápido, eficiente e com menor margem de erro.</p>
+        <p style="margin-top:16px">A prática constante desses métodos resulta em <strong>maior produtividade</strong> e <strong>melhor experiência para o paciente</strong>.</p>
+
+  - elementId: final-icon
+    elementType: icon
+    bounds: [600, 560, 80, 80]
+    iconName: "fas:heart-pulse"
+    fill:
+      type: solid
+      color: "#FFFFFF20"
+
+</pre>
+</body>
+</html>
